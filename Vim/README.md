@@ -1,2 +1,2 @@
 # Editors
-VS code and Vim related files
+Vim related files
