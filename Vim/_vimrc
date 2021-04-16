@@ -1,0 +1,23 @@
+
+call plug#begin('~/.vim/plugged')
+	Plug 'scrooloose/nerdtree'
+    Plug 'rafi/awesome-vim-colorschemes'
+call plug#end()
+
+let mapleader=","
+nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>s :source $MYVIMRC<CR>
+nnoremap <leader>c :close<CR>
+
+
+set guifont=Consolas:h13
+syntax on
+filetype plugin indent on
+set autoindent
+set expandtab
+set tabstop=4   
+set shiftwidth=4 
+set backspace=2 
+colorscheme OceanicNext
