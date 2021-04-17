@@ -1,4 +1,4 @@
-$VimAutoloadPath = $HOME + "\vimfiles\autoload"
+$VimAutoloadPath = $env:USERPROFILE + "\vimfiles\autoload"
 
 if ( -Not (Test-Path -Path $VimAutoloadPath )) {
     Write-Host $VimAutoloadPath " doesn't exist, directory will be created"
