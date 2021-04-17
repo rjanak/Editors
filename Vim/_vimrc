@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'
     Plug 'rafi/awesome-vim-colorschemes'
+    Plug 'tpope/vim-surround'
 call plug#end()
 
 let mapleader=","
@@ -11,6 +12,8 @@ nnoremap <leader>x :x<CR>
 nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>c :close<CR>
 nnoremap <leader>r :registers<CR>
+nnoremap <leader>n :set relativenumber<CR>
+nnoremap <leader>o :oldfiles<CR>
 
 set guifont=Consolas:h13
 set directory=$HOME\vimswapfiles/
@@ -23,9 +26,3 @@ set shiftwidth=4
 set backspace=2 
 "set undofile "Persistent undo
 colorscheme OceanicNext
-
-
-
-
-
-
