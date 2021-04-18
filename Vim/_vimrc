@@ -35,6 +35,7 @@ set backspace=2
 set ruler
 set showcmd
 set laststatus=2
+set belloff=all
 colorscheme OceanicNext
 
 "Status line 
