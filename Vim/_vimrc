@@ -21,8 +21,10 @@ nnoremap <leader>o :oldfiles<CR>
 nnoremap <leader>t :terminal<CR>
 nnoremap <leader>nt :NERDTree<CR>
 
+nnoremap <F12> :call SetRandomColorScheme()<CR>
+
 set guifont=Consolas:h13
-set directory=$HOME\vimswapfiles/
+set directory=$HOME\vimswapfiles\
 syntax on
 filetype plugin indent on
 set autoindent
@@ -34,3 +36,25 @@ set ruler
 set showcmd
 set laststatus=2
 colorscheme OceanicNext
+
+"Status line 
+set statusline=
+set statusline+=\ %f
+set statusline+=%m\ 
+set statusline+=%y
+set statusline+=%=\ Line: 
+set statusline+=%l\ Column: 
+set statusline+=%c
+
+set statusline+=%{GetCurrentScheme()}
+
+let g:mycolorschemes = uniq(sort(map( globpath(&runtimepath, "colors/*.vim", 0, 1),  'fnamemodify(v:val, ":t:r")' )))
+
+function! SetRandomColorScheme()
+    let l:randomnumber = rand(srand()) % len(g:mycolorschemes)
+    execute 'colorscheme ' .  g:mycolorschemes[l:randomnumber]
+endfunction
+
+function! GetCurrentScheme()
+    colorscheme
+endfunction
