@@ -20,7 +20,10 @@ nnoremap <leader>nr :set norelativenumber<CR>
 nnoremap <leader>o :oldfiles<CR>
 nnoremap <leader>t :terminal<CR>
 nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>b  :buffers<CR>
 
+
+inoremap <C-L> <ESC>
 nnoremap <F12> :call SetRandomColorScheme()<CR>
 
 set guifont=Consolas:h13
